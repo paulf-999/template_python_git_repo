@@ -18,10 +18,14 @@ COLOUR_TXT_FMT_CLOSING := \033[0m
 
 installations: deps install clean
 
+run_pytests:
+	pytest -rA tests/ --no-header --disable-pytest-warnings --color=yes
+
 deps: get_ips
 	@echo "----------------------------------------------------------------------------------------------------------------------"
 	@echo -e "${COLOUR_TXT_FMT_OPENING}Target: 'deps'. Download the relevant pip package dependencies (note: ignore the pip depedency resolver errors.)${COLOUR_TXT_FMT_CLOSING}"
 	@echo "----------------------------------------------------------------------------------------------------------------------"
+	pip3 install pytest -q
 	pip3 install yq -q
 
 install: get_ips
