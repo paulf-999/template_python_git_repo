@@ -14,6 +14,7 @@ __version__ = '1.0'
 import os
 from datetime import datetime
 import logging
+import yaml
 
 working_dir = os.getcwd()
 current_dt_obj = datetime.now()
@@ -29,6 +30,20 @@ def get_logger():
     logger.setLevel(logging.INFO)
 
     return logger
+
+
+def read_ip():
+    """Read input from config file"""
+
+    logger = get_logger()
+
+    with open('ip/config.yaml') as ip_yml:
+        data = yaml.safe_load(ip_yml)
+
+    env = data['general_params']['env']
+    logger.info(f'env = {env}')
+
+    return
 
 
 def main():
