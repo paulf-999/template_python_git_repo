@@ -46,6 +46,15 @@ def read_ip():
     return
 
 
+def function_template():
+    """Description here"""
+    logger = get_logger()
+
+    logger.info('Hello, world!')
+
+    return
+
+
 def main():
     """Main entry point of the app"""
     logger = get_logger()
@@ -53,15 +62,6 @@ def main():
 
     # program logic here
     function_template()
-
-    return
-
-
-def function_template():
-    """Description here"""
-    logger = get_logger()
-
-    logger.info('Hello, world!')
 
     return
 
