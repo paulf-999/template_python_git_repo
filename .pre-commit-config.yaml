@@ -21,7 +21,7 @@ repos:
           - id: trailing-whitespace # trims trailing whitespace.
       # Git hooks
           - id: no-commit-to-branch # prevents users from pushing changes to specific (protected) branches
-            args: [--branch, master, --pattern, release/.*]
+            args: [--branch, main, --pattern, release/.*]
           - id: check-merge-conflict # checks for files that contain merge conflict strings.
       # JSON hooks
           - id: check-json # checks json files for parseable syntax.
@@ -71,12 +71,17 @@ repos:
   ######################################################################################################################
   # Technology-specific linters
   ######################################################################################################################
-  # Shell script hooks
+    # Dockerfile linter
+    - repo: https://github.com/hadolint/hadolint
+      rev: v2.12.0
+      hooks:
+          - id: hadolint
+
+    # Shell script hooks
     - repo: https://github.com/jumanjihouse/pre-commit-hooks
       rev: 3.0.0
       hooks:
           - id: shellcheck # Ensure shell scripts conform to shellcheck
-          - id: shfmt # Check shell style with shfmt
 
   ######################################################################################################################
   # YAML hooks
