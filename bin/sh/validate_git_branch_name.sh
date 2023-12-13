@@ -9,7 +9,11 @@
 ##              follows the naming standard:
 ##              ^(feature|hotfix|release)\/[a-z0-9_]+$
 ##
-## Usage: ./validate_git_branch_name.sh <input git branch name>
+#SHELL = /bin/sh
+
+#================================================================
+# Usage
+#================================================================ ./validate_git_branch_name.sh <input git branch name>
 ##
 #================================================================
 
