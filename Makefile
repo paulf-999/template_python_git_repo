@@ -47,10 +47,8 @@ get_ips:
 	$(eval ENV=$(shell yq -r '.general_params.env | select( . != null )' ${CONFIG_FILE}))
 
 validate_user_ip: get_ips
-	@echo "------------------------------------------------------------------"
-	@echo "${YELLOW}Target: 'validate_user_ip'. Validate the user inputs.${COLOUR_OFF}"
-	@echo "------------------------------------------------------------------"
-	# INFO: Verify the user has provided a value for the key 'env' in ip/config.yaml
+	@echo && echo "${INFO}Called makefile target 'validate_user_ip'. Validate the user inputs.${COLOUR_OFF}" && echo
+	# verify the user has provided a value for the key 'env' in ip/config.yaml
 	@[ "${ENV}" ] || ( echo "\nError: 'ENV' key is empty in ip/config.yaml\n"; exit 1 )
 
 run_pytests:
