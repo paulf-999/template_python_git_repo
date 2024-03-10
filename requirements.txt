@@ -1,7 +1,6 @@
 # This list has been compiled using the following:
 
-# 1. What the data management team have previously compiled, link: https://payroc.atlassian.net/wiki/spaces/TEC/pages/2376237087/Python+Libraries+Data-Management+Specific
-# 2. '20 most popular python packages' | medium.com. Link: https://medium.com/@kasperjuunge/20-most-downloaded-python-packages-explained-f5cded2eb70d
+# '20 most popular python packages' | medium.com. Link: https://medium.com/@kasperjuunge/20-most-downloaded-python-packages-explained-f5cded2eb70d
 
 # Azure libraries
 azure.identity==1.13.0  # Microsoft Azure Identity Library for Python
